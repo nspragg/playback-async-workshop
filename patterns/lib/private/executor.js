@@ -7,8 +7,8 @@ async function parallelExecutor(arr, fn, limit = CONCURRENCY_LEVEL) {
   if (!Array.isArray(arr)) throw new TypeError(`Expecting array but got ${typeof arr}`);
 
   let active = 0;
-  const results = new Array(arr.length);
   let i = 0;
+  const results = [];
   return new Promise((resolve, reject) => {
     function invoke(element, item) {
       fn(item, i)
