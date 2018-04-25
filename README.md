@@ -6,7 +6,7 @@
 
 * Get source
 ```bash
-git clone git@github.com:nspragg/iplayer-web-async-workshop.git
+git clone https://github.com/nspragg/playback-async-workshop
 ```
 * Ensure Node 8 is installed. 
 
