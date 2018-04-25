@@ -1,5 +1,6 @@
 'use strict';
 
+const Promise = require('bluebird');
 const asyncify = require('../lib/asyncify');
 const double = require('./utils/functions');
 const ExecutorError = require('./../lib/private/ExecutorError');

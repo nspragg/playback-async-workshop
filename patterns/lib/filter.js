@@ -1,5 +1,11 @@
 'use strict';
 
 module.exports = async (arr, fn) => {
-  throw new Error('Not implemented');
+  const results = [];
+  for (const item of arr) {
+    if (await fn(item)) {
+      results.push(item);
+    }
+  }
+  return results;
 };

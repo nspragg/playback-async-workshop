@@ -1,5 +1,9 @@
 'use strict';
 
 module.exports = async (iterable, fn, initial) => {
-  throw new Error('Not implemented');
+  let accumulator = initial;
+  for (const item of iterable) {
+    accumulator = await fn(accumulator, item);
+  }
+  return accumulator;
 };

@@ -1,7 +1,8 @@
 'use strict';
 
-async function each(arr, fn) {
-  throw new Error('Not implemented');
-}
+const toAsync = require('./private/toAsync');
+const fixedExecutor = require('./private/executor');
 
-module.exports = each;
+module.exports = async function each(arr, fn) {
+  return fixedExecutor(arr, toAsync(fn));
+};
