@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports.toAsync = (fn) => {
-  // convert fn to an async function
+  if (fn.constructor.name !== 'AsyncFunction') {
+    return async (item) => {
+      return fn(item);
+    };
+  }
   return fn;
 };

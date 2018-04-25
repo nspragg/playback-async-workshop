@@ -1,3 +1,5 @@
 'use strict';
 
-module.exports.convert = (pending) => { };
+module.exports.convert = async (pending) => {
+  return pending;
+};

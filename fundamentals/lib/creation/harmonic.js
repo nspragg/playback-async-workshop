@@ -9,6 +9,6 @@ function harmonicSum(n) {
 }
 
 // UNCOMMENT CODE (this is intentional)
-// module.exports.harmonic = (n) => {
-//   return await harmonicSum(n);
-// };
+module.exports.harmonic = async (n) => {
+  return await harmonicSum(n);
+};

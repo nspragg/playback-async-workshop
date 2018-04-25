@@ -1,3 +1,7 @@
 'use strict';
 
-module.exports.toPromise = (fn) => { };
+const util = require('util');
+
+module.exports.toPromise = (fn) => {
+  return util.promisify(fn);
+};

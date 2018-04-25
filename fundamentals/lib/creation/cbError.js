@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports.createError = (message, cb) => {
-  cb();
+  cb(new Error(message));
 };

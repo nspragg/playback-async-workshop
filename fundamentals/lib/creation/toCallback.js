@@ -1,5 +1,7 @@
 'use strict';
 
+const util = require('util');
+
 module.exports.toCallback = (fn) => {
-  return;
+  return util.callbackify(fn);
 };
